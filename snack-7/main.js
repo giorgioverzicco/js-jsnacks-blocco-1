@@ -9,5 +9,7 @@ for (let i = 0; i < firstNames.length; i++) {
 
   if (!guests.includes(fullName)) {
     guests.push(fullName);
+  } else {
+    i--;
   }
 }
