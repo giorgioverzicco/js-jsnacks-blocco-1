@@ -3,6 +3,10 @@ const lastNames = ["Verzicco", "Todisco", "Giannetta", "Mosca"];
 const guests = [];
 
 for (let i = 0; i < firstNames.length; i++) {
-  const fullName = firstNames[i] + " " + lastNames[i];
-  guests.push(fullName);
+  const randFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
+  const randLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+  const fullName = randFirstName + " " + randLastName;
+  if (!guests.includes(fullName)) {
+    guests.push(fullName);
+  }
 }
